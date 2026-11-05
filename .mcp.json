@@ -1,21 +1,21 @@
 {
   "mcpServers": {
-    "fal-ai": {
-      "url": "https://mcp.fal.ai/mcp",
-      "headers": {
-        "Authorization": "Bearer ${FAL_KEY}"
-      }
-    },
     "replicate": {
       "command": "npx",
-      "args": ["-y", "replicate-mcp"],
+      "args": [
+        "-y",
+        "replicate-mcp"
+      ],
       "env": {
         "REPLICATE_API_TOKEN": "${REPLICATE_API_TOKEN}"
       }
     },
     "minimax": {
       "command": "uvx",
-      "args": ["minimax-mcp", "-y"],
+      "args": [
+        "minimax-mcp",
+        "-y"
+      ],
       "env": {
         "MINIMAX_API_KEY": "${MINIMAX_API_KEY}",
         "MINIMAX_API_HOST": "${MINIMAX_API_HOST}",

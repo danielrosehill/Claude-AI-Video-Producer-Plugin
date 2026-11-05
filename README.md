@@ -52,9 +52,8 @@ Production utilities:
 
 ## Bundled MCP servers
 
-The plugin ships with three MCP servers preconfigured (see `.mcp.json`):
+The plugin ships with two MCP servers preconfigured (see `.mcp.json`). fal needs no connection: generation goes through `runners/fal_run.mjs`, and models are browsed on fal.ai.
 
-- **fal-ai** — hosted at `https://mcp.fal.ai/mcp` (HTTP transport, requires `FAL_KEY`). Catalogue browsing only; actual generation goes through `runners/fal_run.mjs`.
 - **replicate** — local stdio via `npx -y replicate-mcp` (requires `REPLICATE_API_TOKEN`). Used for both browsing and execution.
 - **minimax** — local stdio via `uvx minimax-mcp` (requires `MINIMAX_API_KEY` + `MINIMAX_API_HOST`). Provides `generate_video` (Hailuo), `text_to_image`, `text_to_audio`, `voice_clone`, `voice_design`, `music_generation`.
 

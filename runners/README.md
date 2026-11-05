@@ -43,7 +43,7 @@ python runners/wavespeed_run.py <model_id> <input.json|-|inline-json> [--output 
 
 ## When to call which
 
-- **Catalog browsing / metadata** → MCP servers (`fal-ai`, `replicate`, `minimax-mcp`).
+- **Catalog browsing / metadata** → MCP servers (`replicate`, `minimax-mcp`); fal.ai model pages for fal.
 - **Actual generation, queued jobs, file uploads** → these runners.
 
-The hosted fal MCP at `mcp.fal.ai` is fine for "what models exist", but the SDK runner is what you want for production calls (queue polling, file inputs/outputs, structured errors).
+The SDK runner is what you want for production calls (queue polling, file inputs/outputs, structured errors).

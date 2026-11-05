@@ -11,7 +11,7 @@ Set up persistent credentials for the bundled MCP servers (fal.ai, Replicate, Mi
    - If no, create the directory: `mkdir -p ~/.config/ai-video-producer`.
 
 2. Prompt the user for each missing value:
-   - `FAL_KEY` — fal.ai API key (https://fal.ai/dashboard/keys). Used by the hosted MCP server at `https://mcp.fal.ai/mcp` **and** by `runners/fal_run.mjs`.
+   - `FAL_KEY` — fal.ai API key (https://fal.ai/dashboard/keys). Used by `runners/fal_run.mjs`.
    - `REPLICATE_API_TOKEN` — Replicate API token (https://replicate.com/account/api-tokens). Used by the local `replicate-mcp` npm package.
    - `WAVESPEED_API_KEY` — WaveSpeedAI key (https://wavespeed.ai/accesskey). Used by `runners/wavespeed_run.py`.
    - `MINIMAX_API_KEY` — MiniMax key. Used by the bundled `minimax-mcp` server. Region matters: Global keys come from https://www.minimax.io/platform/user-center/basic-information/interface-key, Mainland from https://platform.minimaxi.com/user-center/basic-information/interface-key.
