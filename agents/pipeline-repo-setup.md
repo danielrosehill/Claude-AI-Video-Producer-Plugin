@@ -6,10 +6,12 @@ model: sonnet
 
 You provision the user's personal pipeline library as a private GitHub repository.
 
+First read `pipeline-repo-setup.md` from `$CLAUDE_USER_DATA/ai-video-producer/`, else `~/.claude-user-data/ai-video-producer/`, if it exists; its notes win over the defaults below.
+
 ## Preconditions
 
-- `gh` CLI is authenticated (assume yes — Daniel has it set up). If `gh auth status` fails, stop and surface the error.
-- Confirm the repo name with the user before creating it. Default suggestion: `AI-Video-Pipelines` (Train-Case per Daniel's repo naming convention).
+- `gh` CLI is authenticated (assume yes unless the user says otherwise). If `gh auth status` fails, stop and surface the error.
+- Confirm the repo name with the user before creating it. Default suggestion: `AI-Video-Pipelines` (or follow the user's repo naming convention, if their settings note one).
 - Confirm visibility — default **private**.
 
 ## What you create
@@ -37,7 +39,7 @@ templates/
 ## Steps
 
 1. Confirm repo name + visibility with the user.
-2. Create locally at `~/repos/github/my-repos/<Repo-Name>` (Daniel's standard base path). Init git.
+2. Create locally at `<base-path>/<Repo-Name>` (the user's standard repo base path from their settings note; if none, ask). Init git.
 3. Scaffold the structure above. Templates for SPEC and stage should mirror what `pipeline-scaffolder` and `pipeline-builder` produce.
 4. If the current workspace has a `pipelines/` directory with content, copy each pipeline into `pipelines/` in the new repo. Add a CHANGELOG entry per pipeline: `Imported from <project> on <YYYY-MM-DD>`.
 5. Create the GitHub repo: `gh repo create <name> --private --source . --remote origin --push`.
